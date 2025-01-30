@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: url('/static/heart%20image.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire screen */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent overlay */
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    width: 400px;
+    text-align: center;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px; /* Space between logo and form */
+    animation: fadeIn 1s ease-in-out;
+}
+
+.logo img {
+    width: 100%; /* Make logo responsive */
+    border-radius: 50%;
+}
+
+/* Form box styling */
+.form-box {
+    width: 100%;
+    animation: slideIn 0.6s ease-out;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #e74c3c;
+    font-weight: 700;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Input Styling */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #74b9ff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(116, 185, 255, 0.6);
+}
+
+/* Button Styling */
+button {
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #c0392b, #e74c3c);
+    transform: scale(1.05);
+}
+
+/* Optional Animation for sliding the form in */
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Optional fadeIn animation for the logo */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .logo {
+        width: 120px; /* Make logo smaller on mobile */
+        margin-bottom: 15px; /* Less space between logo and form */
+    }
+}

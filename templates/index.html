@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for the icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="static/heartlogo.webp" alt="Heart Prediction Logo">
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-box">
+            <h1>💓 Heart Disease Prediction</h1>
+            <form method="POST" action="/">
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+                <label for="cp">Chest Pain Type (cp):</label>
+                <input type="number" id="cp" name="cp" placeholder="Enter chest pain type" required>
+
+                <label for="thalach">Max Heart Rate Achieved (thalach):</label>
+                <input type="number" id="thalach" name="thalach" placeholder="Enter max heart rate" required>
+
+                <!-- Predict Button with Font Awesome Icon -->
+                <button type="submit">
+                    <i class="fas fa-search"></i> Predict
+                </button>
+            </form>
+
+            <!-- Display Prediction Result -->
+            {% if result %}
+            <div class="result">
+                <p><strong>Prediction:</strong> {{ result }}</p>
+            </div>
+            {% endif %}
+
+            <!-- Display Error Message -->
+            {% if error %}
+            <div class="error">
+                <p><strong>Error:</strong> {{ error }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
