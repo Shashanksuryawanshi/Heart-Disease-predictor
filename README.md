@@ -48,34 +48,30 @@ pip install -r requirements.txt
 2. Run the preprocessing and training scripts using the notebook or provided files.
 3. Launch the Streamlit app:
    ```bash
-   streamlit run heart.py
+   app.py
    ```
 
 ### Example
 ```bash
-streamlit run heart.py
+app.py
 ```
 
 ### File Structure
 ```plaintext
 .
-├── HeartFailurePrediction.ipynb
-├── LICENSE
-├── README.md
-├── features.csv
-├── heart - heart.csv
-├── heart.py
-├── random_forest_model.pkl
-├── scaler.pkl
-```
+.
+your_project/
+│
+├── app.py                   # Main application file
+├── heart.csv                # Data file
+├── ML demo test.ppk         # PPK file for SSH
+├── model.pkl                # Serialized machine learning model
+├── requirements.txt         # Dependencies
+├── static/                  # Static files (CSS, JavaScript, images)
+│   └── ...
+├── templates/               # HTML templates
+│   └── ...
+├── venv/                    # Virtual environment
+│   └── ...
+└── .gitignore               # Git ignore file
 
-### Streamlit App
-The Streamlit app provides an intuitive interface for users to input their health data and receive predictions. 
-
-1. **Input Fields:** Enter details such as age, gender, cholesterol levels, blood pressure, etc.
-2. **Predict Button:** Click the button to get the prediction result ("At Risk" or "Not At Risk").
-3. **Visualization:** Displays visual summaries of the data and model insights.
-
-## Acknowledgments
-- Inspired by global efforts to improve early detection of heart disease.
-- Thanks to the open-source community for providing excellent libraries and tools.
